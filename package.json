@@ -6,7 +6,8 @@
   "scripts": {
     "start": "serve -s dist",
     "dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [
     "react",
