@@ -15,8 +15,7 @@ export class SkiDayRow extends React.Component {
         return (
             <tr>
                 <td>
-                    {this.props.date.getMonth() + 1}/{this.props.date.getDay()}/
-                    {this.props.date.getFullYear()}
+                   {this.props.date}
                 </td>
                 <td>
                     {this.props.resort}
@@ -34,7 +33,7 @@ export class SkiDayRow extends React.Component {
 
 SkiDayRow.propTypes = {
     resort: PropTypes.string.isRequired,
-    date: PropTypes.instanceOf(Date).isRequired,
+    date: PropTypes.string.isRequired,
     powder: PropTypes.bool,
     backcountry: PropTypes.bool
 };

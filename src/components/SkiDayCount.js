@@ -11,12 +11,12 @@ export class SkiDayCount extends React.Component {
         super(props);
     }
 
-    percentTODecimal(decimal){
+    static percentTODecimal(decimal){
         return (Math.round(decimal * 10000)/100 + '%');
     }
 
-    calculateGoalProgress(total, goal){
-        return this.percentTODecimal(total/goal);
+    static calculateGoalProgress(total, goal){
+        return SkiDayCount.percentTODecimal(total/goal);
     }
 
     render() {
@@ -39,7 +39,7 @@ export class SkiDayCount extends React.Component {
                 </div>
                 <div>
                     <span>
-                        {this.calculateGoalProgress(this.props.total, this.props.goal)}
+                        {SkiDayCount.calculateGoalProgress(this.props.total, this.props.goal)}
                     </span>
                 </div>
             </div>
