@@ -1,6 +1,20 @@
 import React, {Component} from 'react';
 import PropType from 'prop-types'
+import {AutoCompleteComponent} from "./AutoCompleteComponent";
 
+const resortList = [
+    "Alpine Meadows",
+    "Boreal",
+    "Diamond Peak",
+    "Donner Ski Ranch",
+    "Heavenly",
+    "Homewood",
+    "Kirkwood",
+    "Mt. Rose",
+    "Northstar",
+    "Squaw Valley",
+    "Sugar Bowl"
+];
 export class AddDayForm extends Component{
     constructor(props) {
         super(props);
@@ -25,12 +39,7 @@ export class AddDayForm extends Component{
         return (
             <form className="add-day" onSubmit={this.submit}>
                 <label htmlFor="resort">Resort Name</label>
-                <input
-                    ref="resort"
-                    defaultValue={resort}
-                    type="text"
-                    id="resort"
-                    required/>
+                <AutoCompleteComponent id="resort" options={resortList} ref="resort"/>
 
                 <label htmlFor="date">Date</label>
                 <input
