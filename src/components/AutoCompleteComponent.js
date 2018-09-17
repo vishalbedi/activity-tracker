@@ -14,14 +14,14 @@ export class AutoCompleteComponent extends Component{
     }
     render() {
         return (
-            <div>
+            <div className="autocomplete">
                 <input
                     ref="inputResort"
                     list="list-resorts"
                     type="text" />
                 <datalist id="list-resorts">
                     {this.props.options.map(
-                        (opt, i) => <option key={i}>{opt}</option>
+                        (opt, i) => <option className="suggestions" key={i}>{opt}</option>
                     )}
                 </datalist>
             </div>

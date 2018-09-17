@@ -2,7 +2,8 @@ import React from 'react';
 import {render} from 'react-dom';
 import {App} from "./components/App";
 import {NotFound} from "./components/NotFound";
-
+import './stylesheets/ui.scss';
+import './stylesheets/index.scss';
 import {HashRouter as Router, Route, Switch} from  'react-router-dom';
 import {AddDayForm} from "./components/AddDayForm";
 

@@ -37,7 +37,7 @@ export class SkiDayCount extends React.Component {
                     <MdTerrain/>
                     <span>hiking day</span>
                 </div>
-                <div>
+                <div className="div.goal-progress">
                     <span>
                         {SkiDayCount.calculateGoalProgress(this.props.total, this.props.goal)}
                     </span>

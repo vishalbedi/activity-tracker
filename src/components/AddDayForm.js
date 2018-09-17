@@ -39,7 +39,7 @@ export class AddDayForm extends Component{
         return (
             <form className="add-day" onSubmit={this.submit}>
                 <label htmlFor="resort">Resort Name</label>
-                <AutoCompleteComponent id="resort" options={resortList} ref="resort"/>
+                <AutoCompleteComponent  options={resortList} ref="resort"/>
 
                 <label htmlFor="date">Date</label>
                 <input
